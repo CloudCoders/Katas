@@ -9,6 +9,7 @@ public class Territory {
     private int cm;
 
     public Territory(int cm) {
+        this.cm = cm;
         territory = new boolean[cm][cm];
         for (int i = 0; i < territory.length; i++){
             for (int j = 0; j < territory[i].length; j++){
@@ -21,14 +22,20 @@ public class Territory {
         return cm;
     }
 
+    public boolean[][] getTerritory() {
+        return territory;
+    }
+
     public synchronized void move(int x0, int y0, int x, int y){
         while(territory[x][y]){
             try {
+                System.out.println("DEJAME PASAR CABRON!!!");
                 wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
+
         territory[x0][y0] = false;
         territory[x][y] = true;
         notifyAll();
