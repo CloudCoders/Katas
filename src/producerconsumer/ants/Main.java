@@ -5,7 +5,7 @@ package producerconsumer.ants;
  */
 public class Main {
     public static void main(String... args){
-        int territoryDim = 10;
+        int territoryDim = 40;
         int antNum = 5;
 
         Territory territory = new Territory(territoryDim);

@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package horserunning;
+package horserace;
 
 import java.util.Arrays;
 import java.util.logging.Level;
@@ -16,13 +16,24 @@ public class Caballo extends Thread{
     
     private Boolean[] longitud;
     private int posicion;
-    private String resultado = "";
+    private String resultado;
+    private boolean haTerminado;
     
     public Caballo(String name, Boolean[] longitud) {
         super(name);
         this.longitud = longitud;
+        resultado = "";
+        haTerminado = false;
     }
-    
+
+    public boolean isHaTerminado() {
+        return haTerminado;
+    }
+
+    public void setHaTerminado(boolean haTerminado) {
+        this.haTerminado = haTerminado;
+    }
+
     public void setPosicion(int posicion){
         this.posicion = posicion;
     }
@@ -48,6 +59,7 @@ public class Caballo extends Thread{
             }
         }
         resultado = "El "+getName()+" ha terminado la carrera";
+        haTerminado = true;
     }  
 
     public String getResultado() {

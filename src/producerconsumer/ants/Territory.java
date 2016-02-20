@@ -1,5 +1,7 @@
 package producerconsumer.ants;
 
+import java.util.Arrays;
+
 /**
  * Created by toni on 17/02/16.
  */
@@ -12,9 +14,7 @@ public class Territory {
         this.cm = cm;
         territory = new boolean[cm][cm];
         for (int i = 0; i < territory.length; i++){
-            for (int j = 0; j < territory[i].length; j++){
-                territory[i][j] = false;
-            }
+            Arrays.fill(territory[i], 0, territory[i].length, false);
         }
     }
 
