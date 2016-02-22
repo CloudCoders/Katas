@@ -81,7 +81,7 @@ public class myBuffer{
         System.out.println("Producido: " + caracter);
         buffer[producir] = caracter;
         mostrar();
-        notifyAll();
+        notify();
     }
     
     /**
@@ -102,6 +102,6 @@ public class myBuffer{
 
         System.out.println("Consumido: "+buffer[consumir]);
         buffer[consumir] = ' ';
-        notifyAll();
+        notify();
     }
 }

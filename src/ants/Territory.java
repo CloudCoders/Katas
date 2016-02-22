@@ -1,4 +1,4 @@
-package producerconsumer.ants;
+package ants;
 
 import java.util.Arrays;
 

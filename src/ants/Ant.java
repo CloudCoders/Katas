@@ -1,7 +1,6 @@
-package producerconsumer.ants;
+package ants;
 
 import java.awt.*;
-import java.util.IllegalFormatException;
 
 /**
  * Created by toni on 17/02/16.

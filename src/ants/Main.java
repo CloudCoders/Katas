@@ -1,4 +1,4 @@
-package producerconsumer.ants;
+package ants;
 
 /**
  * Created by toni on 19/02/16.
