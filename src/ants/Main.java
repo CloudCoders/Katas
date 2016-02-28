@@ -5,7 +5,7 @@ package ants;
  */
 public class Main {
     public static void main(String... args){
-        int territoryDim = 40;
+        int territoryDim = 9;
         int antNum = 5;
 
         Territory territory = new Territory(territoryDim);
@@ -14,16 +14,6 @@ public class Main {
             Ant ant = new Ant("Ant "+j, territory);
             ant.start();
         }
-
-        Ant fran = new Ant("Fran", territory);
-        Ant sara = new Ant("Saruki_roxy", territory);
-        Ant rober = new Ant("eR_RoB3r", territory);
-        Ant toni = new Ant("El maquina", territory);
-
-        fran.start();
-        sara.start();
-        rober.start();
-        toni.start();
 
         while (true){
             try {

@@ -98,9 +98,9 @@ public class Carrera {
         String carrera = "";
         for (int i = 0; i < longitudCaballo.length; i++) {
             if (i == longitudCaballo.length-1){
-                carrera += "(¡)";
+                carrera += "*";
             }else if (longitudCaballo[i]) {
-                carrera += "(_)_)==D";
+                carrera += "|->";
             }else {
                 carrera += " ";
             }

@@ -19,23 +19,44 @@ public class Ant extends Thread {
         initPoint();
     }
 
+    public void setPoint(Point point) {
+        this.point = point;
+    }
+
     private void initPoint() {
         point = new Point();
-        int random = getRandom(cm-1);
+        int random = Util.getRandom(cm-1);
         point.x = random;
         point.y = random+1;
         sayMyName();
     }
 
-    private int getRandom(int bounder){
-        return (int)((Math.random()*bounder));
+    public Point[] movements(){
+        Point[] points = new Point[4];
+
+        int x = point.x;
+        int y = point.y;
+
+        points[0] = new Point(x-1, y);
+        points[1] = new Point(x, y-1);
+        points[2] = new Point(x+1, y);
+        points[3] = new Point(x, y+1);
+
+        for (int i = 0; i < points.length; i++){
+            Point p = points[i];
+            if (p.x < 0 || p.y < 0 || p.x > cm-1 || p.y > cm-1){
+                points[i] = point;
+            }
+        }
+
+        return points;
     }
 
     public Point move(){
         Point point = new Point();
         do {
-            int randomOp = getRandom(2);
-            int randomPoint = getRandom(2);
+            int randomOp = Util.getRandom(2);
+            int randomPoint = Util.getRandom(2);
             if (randomOp == 0){
                 point.x = moveX(randomPoint);
                 point.y = this.point.y;
@@ -80,11 +101,11 @@ public class Ant extends Thread {
     public void run() {
         while (true){
             Point newPoint = move();
-            //System.out.println(antName+": ("+point.x+","+point.y+") to ("+newPoint.x+","+newPoint.y+")");
-            territory.move(point.x, point.y, newPoint.x, newPoint.y);
-            point = newPoint;
+            territory.move(point.x, point.y, this);
+            //territory.move(point.x, point.y, newPoint.x, newPoint.y);
+            //point = newPoint;
             try {
-                Thread.sleep(500);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
