@@ -6,7 +6,7 @@ package ants;
 public class Main {
     public static void main(String... args){
         int territoryDim = 5;
-        int antNum = 20;
+        int antNum = 5;
 
         Territory territory = new Territory(territoryDim);
 

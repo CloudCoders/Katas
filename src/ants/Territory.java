@@ -32,7 +32,7 @@ public class Territory {
         Point p = points[Util.getRandom(points.length)];
         while(territory[p.x][p.y]){
             try {
-                System.out.println(ant.getName()+" is stoped");
+                //System.out.println(ant.getName()+" is stoped");
                 p = points[Util.getRandom(points.length)];
                 notifyAll();
                 wait();
