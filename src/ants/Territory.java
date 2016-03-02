@@ -34,6 +34,7 @@ public class Territory {
             try {
                 System.out.println(ant.getName()+" is stoped");
                 p = points[Util.getRandom(points.length)];
+                notifyAll();
                 wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();
