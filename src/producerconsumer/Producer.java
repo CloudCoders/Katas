@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package producerconsumer.buffer;
+package producerconsumer;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -11,20 +11,15 @@ import java.util.logging.Logger;
  *
  * @author Antonio López Marín
  */
-public class Productor extends Thread {
+public class Producer extends Thread {
 
-    myBuffer buffer;
+    CircularBuffer circularBuffer;
 
-    public Productor(myBuffer buffer) {
+    public Producer(CircularBuffer circularBuffer) {
         super();
-        this.buffer = buffer;
+        this.circularBuffer = circularBuffer;
     }
-    
-    /**
-     * Pongo las letras del abecedario, y produzco diez caracteres, se podrian
-     * producir todos los que se quieran.
-     * 
-     */
+
     @Override
     public void run() {
         char[] c = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 
@@ -33,13 +28,13 @@ public class Productor extends Thread {
                 int cont = 0;
                 for (int j = 0; j < 10; j++) {
                         char aux = c[j];
-                        buffer.put(cont, aux);                        
+                        circularBuffer.put(cont, aux);
                         sleep(800);
                     if (cont==4) cont = -1;
                     cont++;
                 }                
             } catch (InterruptedException ex) {
-                Logger.getLogger(Consumidor.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Consumer.class.getName()).log(Level.SEVERE, null, ex);
             }
     }
 }

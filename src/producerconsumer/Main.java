@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package producerconsumer.buffer;
+package producerconsumer;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -17,20 +17,20 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        myBuffer buffer = new myBuffer();
+        CircularBuffer circularBuffer = new CircularBuffer();
 
-        Productor producto = new Productor(buffer);
-        Consumidor consumidor = new Consumidor(buffer);
+        Producer producto = new Producer(circularBuffer);
+        Consumer consumer = new Consumer(circularBuffer);
 
         producto.start();
-        consumidor.start();
+        consumer.start();
         try {
             producto.join();
-            consumidor.join();
+            consumer.join();
         } catch (InterruptedException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
-        System.out.println("Termino el programa");
+        System.out.println("End program");
     }
 
 }

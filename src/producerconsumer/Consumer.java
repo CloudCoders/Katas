@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package producerconsumer.buffer;
+package producerconsumer;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -12,31 +12,26 @@ import java.util.logging.Logger;
  *
  * @author Antonio López Marín
  */
-public class Consumidor extends Thread {
+public class Consumer extends Thread {
 
-    myBuffer buffer;
+    CircularBuffer circularBuffer;
 
-    public Consumidor(myBuffer buffer) {
+    public Consumer(CircularBuffer circularBuffer) {
         super();
-        this.buffer = buffer;
+        this.circularBuffer = circularBuffer;
     }
-    
-    /**
-     * Consume diez caracteres del buffer que maximo tiene 5, por eso 
-     * se le pasa la posicion que quiere consumir y cuando llegue a 5 que 
-     * empiece por el primero.
-     */
+
     @Override
     public void run() {
         int cont = 0;
         for (int i = 0; i < 10; i++) {            
-            buffer.get(cont);
+            circularBuffer.get(cont);
             if (cont==4) cont = -1;
             cont++;
             try {
                 sleep(1000);
             } catch (InterruptedException ex) {
-                Logger.getLogger(Consumidor.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Consumer.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }
