@@ -36,12 +36,12 @@ Concurrent exercises written in java
 ##### String manipulation
 
 - [KataDictionaryReplacer](http://codingdojo.org/cgi-bin/index.pl?KataDictionaryReplacer)
-- [KataWorldWrap](http://codingdojo.org/cgi-bin/index.pl?KataWorldWrap)
+- [KataWordWrap](http://codingdojo.org/cgi-bin/index.pl?KataWorldWrap)
 
 ##### Specific Technologies
 
 - [KataQotdCgi](http://codingdojo.org/cgi-bin/index.pl?KataQotdCgi)
-- [JataJEEWebAuthentication](http://codingdojo.org/cgi-bin/index.pl?JataJEEWebAuthentication)
+- [kataJEEWebAuthentication](http://codingdojo.org/cgi-bin/index.pl?kataJEEWebAuthentication)
 
 ##### Refactoring legacy code
 
