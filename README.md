@@ -35,7 +35,7 @@ Concurrent exercises written in java
 
 ##### String manipulation
 
--[KataDictionaryReplacer](http://codingdojo.org/cgi-bin/index.pl?KataDictionaryReplacer)
+- [KataDictionaryReplacer](http://codingdojo.org/cgi-bin/index.pl?KataDictionaryReplacer)
 - [KataWorldWrap](http://codingdojo.org/cgi-bin/index.pl?KataWorldWrap)
 
 ##### Specific Technologies
@@ -45,7 +45,7 @@ Concurrent exercises written in java
 
 ##### Refactoring legacy code
 
--[TDD with Mock Objects And Design Principles](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises#readme)
+- [TDD with Mock Objects And Design Principles](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises#readme)
 
 
 
