@@ -2,9 +2,7 @@ package ants;
 
 import java.awt.*;
 
-/**
- * Created by toni on 17/02/16.
- */
+
 public class Ant extends Thread {
 
     private Territory territory;

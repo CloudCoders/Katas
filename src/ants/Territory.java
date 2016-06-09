@@ -3,9 +3,6 @@ package ants;
 import java.awt.*;
 import java.util.Arrays;
 
-/**
- * Created by toni on 17/02/16.
- */
 public class Territory {
 
     private boolean[][] territory;

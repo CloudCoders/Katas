@@ -8,10 +8,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-/**
- *
- * @author Antonio López Marín
- */
 public class Consumer extends Thread {
 
     CircularBuffer circularBuffer;
