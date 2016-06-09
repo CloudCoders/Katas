@@ -6,10 +6,6 @@ package horserace;
 
 import java.util.Arrays;
 
-/**
- *
- * @author Antonio López Marín
- */
 public class HorseRace {
 
     private static int position = 1;
@@ -73,7 +69,7 @@ public class HorseRace {
             for (int j = 0; j < 25; j++) {
                 System.out.println("");
             }
-            System.out.println("** HorseRace de horses comenzara en " + i + " **  "
+            System.out.println("** HorseRace strat on " + i + " **  "
                     + "    ** Meta **\n");
             showHorses(horses);
         }

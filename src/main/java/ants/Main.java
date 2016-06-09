@@ -1,8 +1,5 @@
 package ants;
 
-/**
- * Created by toni on 19/02/16.
- */
 public class Main {
     public static void main(String... args){
         int territoryDim = 5;

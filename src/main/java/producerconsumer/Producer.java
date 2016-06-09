@@ -7,10 +7,6 @@ package producerconsumer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author Antonio López Marín
- */
 public class Producer extends Thread {
 
     CircularBuffer circularBuffer;

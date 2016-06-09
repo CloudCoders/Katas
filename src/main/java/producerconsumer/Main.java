@@ -7,15 +7,9 @@ package producerconsumer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author Antonio López Marín
- */
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
         CircularBuffer circularBuffer = new CircularBuffer();
 

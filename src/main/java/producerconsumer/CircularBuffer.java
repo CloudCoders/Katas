@@ -8,23 +8,16 @@ import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author Antonio López Marín
- */
 public class CircularBuffer {
 
     char[] buffer;
     
     public CircularBuffer() {
-        //CircularBuffer de 5
+        //CircularBuffer of 5
         buffer = new char[5];
        Arrays.fill(buffer, ' ');
     }
 
-    /**
-     * Muestra el circularBuffer
-     */
     public void show(){
         for (int i = 0; i < buffer.length; i++) {
             System.out.print(buffer[i]+"|");
