@@ -8,6 +8,6 @@ public class BuzzRule implements Rule {
     }
 
     private boolean isBuzz(int i) {
-        return i % FizzBuzz.BUZZ_VALUE+1 == 0;
+        return i % FizzBuzz.BUZZ_VALUE == 0;
     }
 }
