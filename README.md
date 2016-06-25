@@ -4,7 +4,7 @@
 ##### Algorithmic
 
 - [ ] [KataBankOCR](http://codingdojo.org/cgi-bin/index.pl?KataBankOCR)
-- [ ] [KataFizzBuzz](http://codingdojo.org/cgi-bin/index.pl?KataFizzBuzz)
+- [x] [KataFizzBuzz](http://codingdojo.org/cgi-bin/index.pl?KataFizzBuzz)
 - [ ] [KataPotter](http://codingdojo.org/cgi-bin/index.pl?KataPotter)
 - [ ] [KataRomanNumbers](http://codingdojo.org/cgi-bin/index.pl?KataRomanNumbers)
 - [ ] [KataRomanCalculator](http://codingdojo.org/cgi-bin/index.pl?KataRomanCalculator)
