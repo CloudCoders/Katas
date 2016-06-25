@@ -11,12 +11,12 @@ public class FizzBuzzTest {
     private static final String BUZZ_VALUE = "Buzz";
     private static final String ANY_VALUE = "1";
     private static final String FIZZBUZZ_VALUE = "FizzBuzz";
-    public static final int THREE = 3;
-    public static final int DIVISIBLE_BY_THREE = 6;
-    public static final int FIVE = 5;
-    public static final int DIVISIBLE_BY_FIVE = 10;
-    public static final int DIVISIBLE_BY_THREE_AND_FIVE = 30;
-    public static final int ANY_NUMBER = 1;
+    private static final int THREE = 3;
+    private static final int DIVISIBLE_BY_THREE = 6;
+    private static final int FIVE = 5;
+    private static final int DIVISIBLE_BY_FIVE = 10;
+    private static final int DIVISIBLE_BY_THREE_AND_FIVE = 30;
+    private static final int ANY_NUMBER = 1;
     private FizzBuzz fizzbuzz;
 
     @Before
