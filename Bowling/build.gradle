@@ -12,16 +12,14 @@ buildscript {
     }
 }
 
-apply plugin: 'java'
 apply plugin: 'kotlin'
-
-sourceCompatibility = 1.5
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile 'org.hamcrest:hamcrest-junit:2.0.0.0'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
