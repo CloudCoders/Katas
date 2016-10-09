@@ -56,8 +56,8 @@ class SpareRule() : BowlingRule {
 
 class StrikeRule(): BowlingRule {
   override fun scoreRule(frames: String, idx: Int, roll: Char): Int {
+    val next = frames.next(idx)
     return if (roll == STRIKE) {
-      val next = frames.next(idx)
       10 + score(next) + score(frames.next(idx + 1), score(next))
     } else 0
   }
