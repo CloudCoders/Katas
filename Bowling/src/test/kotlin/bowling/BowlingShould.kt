@@ -6,23 +6,22 @@ import org.hamcrest.MatcherAssert.assertThat
 
 class BowlingShould {
 
-  @Test fun `minimum bowling score when never pin down`() {
+  @Test fun `minimum bowling score`() {
     val score: Int = Bowling().score("--------------------")
-//    val score: Int = Bowling().score("-")
     assertThat(score, `is`(0))
   }
 
-  @Test fun `always 9 pin down in first turn`() {
+  @Test fun `there is always one foot`() {
     val score: Int = Bowling().score("9-9-9-9-9-9-9-9-9-9-")
     assertThat(score, `is`(9*10))
   }
 
-  @Test fun `never score strike or spare`() {
+  @Test fun `calculate when never do strike or spare`() {
     val score: Int = Bowling().score("54545454545454545454")
     assertThat(score, `is`(5*10+4*10))
   }
 
-  @Test fun `in each turn it get spare score`() {
+  @Test fun `calculate spare`() {
     var score = Bowling().score("5/5/-")
     assertThat(score, `is`(25))
 
@@ -33,7 +32,7 @@ class BowlingShould {
     assertThat(score, `is`(12 * 9 + 11))
   }
 
-  @Test fun `maximum bowling score`() {
+  @Test fun `calculate strike`() {
     var score: Int = Bowling().score("X")
     assertThat(score, `is`(10))
     score = Bowling().score("XXXXXXXXXXXX")
