@@ -4,7 +4,7 @@
 
 - [ ] [KataBankOCR](http://codingdojo.org/cgi-bin/index.pl?KataBankOCR)
 - [x] [KataFizzBuzz](http://codingdojo.org/cgi-bin/index.pl?KataFizzBuzz)
-- [x] [KataPotter](http://codingdojo.org/cgi-bin/index.pl?KataPotter)
+- [ ] [KataPotter](http://codingdojo.org/cgi-bin/index.pl?KataPotter)
 - [ ] [KataRomanNumbers](http://codingdojo.org/cgi-bin/index.pl?KataRomanNumbers)
 - [ ] [KataRomanCalculator](http://codingdojo.org/cgi-bin/index.pl?KataRomanCalculator)
 - [ ] [KataNumbersInWorld](http://codingdojo.org/cgi-bin/index.pl?KataNumbersInWorld)

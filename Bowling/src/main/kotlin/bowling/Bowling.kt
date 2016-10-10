@@ -8,14 +8,15 @@ private const val NORMAL_FRAMES: Int = 18
 class Bowling {
   val bowlingRules = listOf<BowlingRule>(LastFrameRule(), NormalRule(), SpareRule(), StrikeRule())
 
-  fun score(frames: String): Int =
-      frames.foldIndexed(0) { idx, score, roll ->
-        score + bowlingRules
-            .filter {
-              !isLastFrame(frames, idx).xor(it is LastFrameRule)
-            }
-            .sumBy { it.scoreRule(frames, idx, roll) }
-      }
+  fun score(frames: String): Int {
+    return frames.foldIndexed(0) { idx, score, roll ->
+      score + bowlingRules
+          .filter {
+            !isLastFrame(frames, idx).xor(it is LastFrameRule)
+          }
+          .sumBy { it.scoreRule(frames, idx, roll) }
+    }
+  }
 }
 
 private fun isLastFrame(frames: String, idx: Int) =
