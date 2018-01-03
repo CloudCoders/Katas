@@ -11,7 +11,7 @@ public class FizzBuzz {
     public static final int BUZZ_VALUE = 5;
     public static final int FIZZ_VALUE = 3;
 
-    List<Rule> rules = new ArrayList<>();
+    List<Rule> rules = new ArrayList();
 
     public FizzBuzz() {
         List<Rule> ruleList = Arrays.asList(new FizzRule(), new BuzzRule(), new AnyValueRule());
